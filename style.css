@@ -1,0 +1,373 @@
+
+
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --dark-sage: #596B5D;
+    --soft-sage: #DCE2D6;
+    --ivory: #F8F7F1;
+    --forest: #343C35;
+    --accent: #819783;
+    --white: #FFFFFF;
+    --light-border: #E2E5DC;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background-color: var(--ivory);
+    color: var(--forest);
+    line-height: 1.7;
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+    line-height: 1.1;
+}
+
+h2 {
+    font-size: 2.2rem;
+    color: var(--dark-sage);
+    margin-bottom: 18px;
+}
+
+h3 {
+    color: var(--dark-sage);
+    margin-bottom: 10px;
+}
+
+p {
+    margin-bottom: 14px;
+}
+
+/* Navigation */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 8%;
+    background-color: var(--ivory);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid var(--light-border);
+}
+
+nav .logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--dark-sage);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: var(--forest);
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: var(--accent);
+}
+
+/* General Sections */
+section {
+    padding: 55px 9%;
+    scroll-margin-top: 85px;
+}
+
+.section-title {
+    margin-bottom: 25px;
+}
+
+/* Home / Hero Section */
+#home {
+    min-height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--soft-sage);
+    padding: 90px 10%;
+}
+
+#home h1 {
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    color: var(--forest);
+    margin: 12px 0;
+}
+
+#home h3 {
+    font-family: 'DM Sans', sans-serif;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: var(--dark-sage);
+}
+
+#home p {
+    max-width: 700px;
+    font-size: 1.05rem;
+}
+
+.hero-tag {
+    color: var(--dark-sage);
+    font-weight: 700;
+    letter-spacing: 3px;
+    font-size: 0.8rem;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    margin: 12px 10px 0 0;
+    background-color: var(--dark-sage);
+    color: var(--white);
+    text-decoration: none;
+    border: 1px solid var(--dark-sage);
+    border-radius: 5px;
+    transition: 0.3s;
+    font-size: 0.9rem;
+}
+
+.btn:hover {
+    background-color: transparent;
+    color: var(--dark-sage);
+}
+
+/* About Section */
+#about {
+    background-color: var(--ivory);
+}
+
+.about-content {
+    max-width: 950px;
+}
+
+/* Education Section */
+#education {
+    background-color: #F0F1E9;
+}
+
+/* Cards Layout */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.education-card {
+    border-bottom: 1px solid #DCE2D6;
+    padding-bottom: 25px;
+    margin-bottom: 25px;
+}
+.card {
+    background-color: var(--white);
+    padding: 25px;
+    border: 1px solid var(--light-border);
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 22px rgba(52, 60, 53, 0.08);
+}
+
+/* Skills */
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.skill-card {
+    background-color: var(--white);
+    padding: 20px;
+    border-left: 4px solid var(--accent);
+    border-radius: 7px;
+}
+
+.skill-card h3 {
+    font-size: 1.05rem;
+}
+
+.skill-card p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+/* Projects */
+#projects {
+    background-color: var(--ivory);
+}
+
+.project-card {
+    background-color: var(--white);
+    padding: 28px;
+    border: 1px solid var(--light-border);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    transition: 0.3s;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(52, 60, 53, 0.08);
+}
+
+.project-card h3 {
+    font-size: 1.35rem;
+}
+
+.project-card p {
+    font-size: 0.95rem;
+}
+
+.project-card ul {
+    padding-left: 22px;
+    margin: 12px 0;
+}
+
+.project-card li {
+    margin-bottom: 6px;
+}
+
+/* Experience */
+#experience {
+    background-color: #F0F1E9;
+}
+
+.experience-card {
+    background-color: var(--white);
+    padding: 28px;
+    border-radius: 10px;
+    border-left: 4px solid var(--accent);
+}
+
+/* Learning & Career Goals */
+#learning {
+    background-color: var(--ivory);
+}
+
+/* Contact */
+#contact {
+    background-color: var(--soft-sage);
+}
+
+.contact-content {
+    max-width: 750px;
+}
+
+.contact-details {
+    margin-top: 20px;
+}
+
+.contact-details p {
+    margin-bottom: 10px;
+}
+
+.contact-details a {
+    color: var(--dark-sage);
+    text-decoration: none;
+}
+
+.contact-details a:hover {
+    text-decoration: underline;
+}
+
+/* Lists */
+ul {
+    padding-left: 22px;
+}
+
+li {
+    margin-bottom: 7px;
+}
+
+/* Footer */
+footer {
+    background-color: var(--forest);
+    color: var(--ivory);
+    text-align: center;
+    padding: 25px 15px;
+    font-size: 0.9rem;
+}
+
+footer p {
+    margin: 5px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    nav {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    nav ul {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 12px 18px;
+    }
+
+    section {
+        padding: 45px 7%;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        padding: 15px 5%;
+    }
+
+    nav ul {
+        gap: 10px 14px;
+    }
+
+    nav ul li a {
+        font-size: 0.8rem;
+    }
+
+    #home {
+        min-height: 70vh;
+        padding: 65px 7%;
+    }
+
+    #home h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    section {
+        padding: 35px 7%;
+    }
+
+    .card,
+    .project-card,
+    .experience-card {
+        padding: 20px;
+    }
+}
